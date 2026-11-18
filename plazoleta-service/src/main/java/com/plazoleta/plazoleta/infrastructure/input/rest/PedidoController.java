@@ -1,7 +1,6 @@
 package com.plazoleta.plazoleta.infrastructure.input.rest;
 
 import com.plazoleta.plazoleta.application.service.PedidoService;
-import com.plazoleta.plazoleta.domain.model.EstadoPedido;
 import com.plazoleta.plazoleta.infrastructure.input.rest.security.JwtPrincipal;
 import com.plazoleta.plazoleta.infrastructure.output.persistence.entity.*;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
