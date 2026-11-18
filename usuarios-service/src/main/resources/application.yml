@@ -1,0 +1,35 @@
+server:
+  port: ${SERVER_PORT:8081}
+
+spring:
+  application:
+    name: usuarios-service
+  datasource:
+    url: ${DB_URL:jdbc:h2:file:./data/usuarios;DB_CLOSE_ON_EXIT=FALSE}
+    username: ${DB_USERNAME:sa}
+    password: ${DB_PASSWORD:}
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+
+security:
+  jwt:
+    secret: ${JWT_SECRET:local-development-secret-change-this-value-1234567890}
+    expiration-minutes: ${JWT_EXPIRATION_MINUTES:120}
+
+plazoleta:
+  internal-token: ${INTERNAL_API_TOKEN:local-internal-token-change-before-deploy}
+
+app:
+  admin:
+    email: ${INITIAL_ADMIN_EMAIL:admin@plazoleta.local}
+    password: ${INITIAL_ADMIN_PASSWORD:Admin123!}
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
